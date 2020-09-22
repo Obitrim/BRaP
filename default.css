@@ -1,0 +1,94 @@
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background-color: var(--primary);
+	font-family: 'roboto', sans-serif;
+
+	--primary: #07689f;
+	--primary-light: #1aa6b7;
+	--primary-dark: #145374;
+	--warning: #ffc93c;
+}
+
+pre {
+	white-space: normal;
+}
+
+.Heading {
+	text-align: center;
+	margin-top: 2rem;
+	color: var(--warning);
+}
+
+.code {
+	padding: 0.5rem;
+}
+
+.AppWrapper {
+	width: 100%;
+	max-width: 768px;
+	margin: 0 auto;
+	margin-top: 2rem;
+	padding: 1rem;
+	box-shadow: inset -5px -5px 10px var(--primary-light), inset 5px 5px 10px var(--primary-dark); 
+}
+
+.PreviewWrapper {
+	min-height: 40vh;
+	box-shadow: -5px -5px 10px var(--primary-light), 5px 5x 10px var(--primary-dark); 
+}
+
+.PreviewWrapper {
+	border: 2px dashed var(--primary);
+	position: relative;
+	background-color: var(--primary-light);
+}
+
+.PreviewWrapper__Box {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--primary);
+}
+
+.PropertyControls {
+	background-color: #ffffff;
+	padding: 1rem;
+	margin-top: 1rem;
+}
+
+.FormGroup {
+	margin: 1.4rem 0;
+}
+.FormSelect {
+	margin-left: 1.4rem;
+	padding: 0.4rem 1rem;
+}
+
+.FormInput {
+	display: block;
+	width: 100%;
+	margin-top: 0.1rem;
+}
+
+@media(min-width: 768px){
+	.AppWrapper { display: flex; }
+	
+	.PreviewWrapper,
+	.PropertyControls 
+	{
+		flex: 1;
+	}
+	
+	.PropertyControls {
+		margin-left: 2rem;
+		margin-top: 0;
+	}
+}
