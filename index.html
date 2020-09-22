@@ -6,9 +6,75 @@
 	<title>BRaP | Border Radius Previewer</title>
 
 	<link rel="stylesheet" href="default.css" />
+	<link rel="stylesheet" href="./highlight/styles/default.css" />
+
+	<script src="./highlight/highlight.pack.js" defer></script>
 	<script src="main.js" defer></script>
 </head>
 <body>
-	
+	<h1 class="Heading">Border-Radius Previewer</h1>
+	<div class="AppWrapper">
+		<div class="PreviewWrapper">
+			<div class="PreviewWrapper__Box"></div>
+		</div>
+		<div class="PropertyControls">
+			<div class="FormGroup FormGroup--SelectGroup">
+				<label for="unit">Unit</label>
+				<select class="FormSelect" name="unit" id="unit">
+					<option value="px">px</option>
+					<option value="%">%</option>
+					<option value="rem">rem</option>
+					<option value="em">em</option>
+				</select>
+			</div>
+			<div class="FormGroup">
+				<label for="topLeft">Top Left</label>
+				<input
+					class="FormInput" 
+					type="range" 
+					name="topLeft" 
+					id="topLeft" 
+					min="0" 
+					max="150"
+				/>
+			</div>
+			<div class="FormGroup">
+				<label for="topRight">Top Right</label>
+				<input
+					class="FormInput" 
+					type="range" 
+					name="topRight"
+					id="topRight"
+					min="0" 
+					max="150"
+				/>
+			</div>
+			<div class="FormGroup">
+				<label for="bottomRight">Bottom Right</label>
+				<input
+					class="FormInput" 
+					type="range" 
+					name="bottomRight" 
+					id="bottomRight" 
+					min="0" 
+					max="150"
+				/>
+			</div>
+			<div class="FormGroup">
+				<label for="bottomLeft">Bottom Left</label>
+				<input
+					class="FormInput" 
+					type="range" 
+					name="bottomLeft" 
+					id="bottomLeft"  
+					min="0" 
+					max="150"
+				/>
+			</div>
+			<div class="FormGroup FormGroup--Code">
+				<pre><code class="css"></code></pre>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
